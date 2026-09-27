@@ -1,0 +1,395 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Lisa Su on Career Choices and High-Performance Computing | KennyのBlog</title><meta name="author" content="Kenny Wu"><meta name="copyright" content="Kenny Wu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="In this talk, Lisa Su reflects on her engineering education, career, and work at AMD. The notes connect long-term strategy, partnerships, chiplets, and AI with advice for students choosing their own p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lisa Su on Career Choices and High-Performance Computing">
+<meta property="og:url" content="https://weipingwu2023.github.io/2026/09/28/2026-09-28-lisa-su-career-advice-and-high-performance-computing/index.html">
+<meta property="og:site_name" content="KennyのBlog">
+<meta property="og:description" content="In this talk, Lisa Su reflects on her engineering education, career, and work at AMD. The notes connect long-term strategy, partnerships, chiplets, and AI with advice for students choosing their own p">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://weipingwu2023.github.io/img/sponge.png">
+<meta property="article:published_time" content="2026-09-28T01:21:00.000Z">
+<meta property="article:modified_time" content="2026-09-27T17:04:17.652Z">
+<meta property="article:author" content="Kenny Wu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weipingwu2023.github.io/img/sponge.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Lisa Su on Career Choices and High-Performance Computing",
+  "url": "https://weipingwu2023.github.io/2026/09/28/2026-09-28-lisa-su-career-advice-and-high-performance-computing/",
+  "image": "https://weipingwu2023.github.io/img/sponge.png",
+  "datePublished": "2026-09-28T01:21:00.000Z",
+  "dateModified": "2026-09-27T17:04:17.652Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Kenny Wu",
+      "url": "https://weipingwu2023.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://weipingwu2023.github.io/2026/09/28/2026-09-28-lisa-su-career-advice-and-high-performance-computing/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Lisa Su on Career Choices and High-Performance Computing',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/sponge.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">KennyのBlog</span></a><a class="nav-page-title" href="/"><span class="site-name">Lisa Su on Career Choices and High-Performance Computing</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Lisa Su on Career Choices and High-Performance Computing</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-09-28T01:21:00.000Z" title="Created 2026-09-28 09:21:00">2026-09-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-09-27T17:04:17.652Z" title="Updated 2026-09-28 01:04:17">2026-09-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B9%90%E5%9B%AD/">英语乐园</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>In this talk, Lisa Su reflects on her engineering education, career, and work at AMD. The notes connect long-term strategy, partnerships, chiplets, and AI with advice for students choosing their own path. The transcript is followed by business and technology vocabulary and a Chinese translation.</p>
+<p><a target="_blank" rel="noopener" href="https://youtu.be/A26OIgzNR34?si=knp2hMDMPILt3Ybk">Watch on YouTube</a></p>
+<span id="more"></span>
+
+<h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><blockquote>
+<p>以下为原笔记中的视频转录与学习内容，保留原素材的叙述语境。</p>
+</blockquote>
+<p>Um, first of all, President Chen, thank you so much for inviting me. Actually, you invited me several times to come to NTEU, and I was honored every time to come here. But sometimes when I come to Taiwan, it’s very, very busy, and especially around Computex timing, it’s always very busy. So this is actually a great time that I can visit, and you know, thank you for the warm invitation, and Professor Woo as well. Thank you so much. It’s really my pleasure to be here to meet all of you very talented students, and you make me feel very old, but hopefully I can give you a few stories for your career.</p>
+<p>So maybe I should say my background was in electrical engineering and computer science. That’s where I went to school — MIT — for bachelor’s, master’s, and PhD, and my specialty was semiconductor devices. So when I was a young student, that is what I studied. Now, for AMD, I’ve been in the semiconductor industry for over 30 years, and what you find is that the technology moves so fast. For AMD, I’ve been with the company since 2012, and CEO since 2014.</p>
+<p>And probably the most important thing with any company is to decide: what do you want to be when you grow up? And for AMD, my belief is that our specialty is in high performance computing. And high performance computing is really at the center of all of our lives today. I’d like to say that AMD’s technology touches billions of people every day — whether you’re talking about cloud data centers, or anywhere in the edge of the network, or PCs, or automotive, or industrial — you probably can touch some of AMD’s technology.</p>
+<p>But from a technology company standpoint, the most important thing is you have to have a long-term strategy and roadmap. And so our focus was really on three things. First is high performance computing. The second is to have really excellent partnerships — TSMC is at the center of our partnership overall. And then the third piece is that the semiconductor industry is changing, and many of you have heard that Moore’s law is slowing down and changing. And we made a big bet on chiplet technology as a very key area going forward.</p>
+<p>So these are some of the things that were important for AMD, and today I’m very happy to say that when you look at the top supercomputers in the world, five out of the top ten are based on AMD’s technology. And from that standpoint, I really feel that high performance computing is at the center of what’s most important going forward.</p>
+<p>So I heard that many students still view chip design as the most exciting thing. I would say that there’s always a movement — sometimes hardware is more exciting, sometimes software is more exciting. I think from my standpoint, the most exciting part of design is actually holistic design. You have to really design hardware, software, and systems together. Especially when we’re talking about AI going forward, you cannot design each piece separately. You actually have to think about what is the overall system application — especially thinking about the algorithms and the applications — and then you can think about how you want to design your chips.</p>
+<p>The one thing I can say about the AI industry is: every week there is new technology and innovation coming out. And I think DeepSeek was one of those moments when it came out in January. I think there was some surprise. And when you look at what they’ve done, it’s actually pretty clever technology — really gathering all of the different innovations, using the mixture-of-experts models, and so on and so forth. But the main thing that we saw with DeepSeek is: when you can find a way to make AI more accessible and actually cheaper, you actually will have more usage and application of AI. So the main thing that DeepSeek has done is it has really accelerated the application of AI.</p>
+<p>Of course, that’s not a market statement — that’s a technology statement. From everything that we see, the key point about AI is that there’s no one-size-fits-all for the computing ecosystem. You have the very large frontier models, where the few people who can invest at that level — hundreds of billions of dollars — are going to go as fast as possible because they want to build the best model. But you also find that that is just one application of AI. You also see there will be many different medium-sized models, smaller models, and people will use different algorithms to get there. So my expectation is that there will continue to be very significant investment — including very large investments as well as more affordable investments — going forward.</p>
+<p>So the most important thing I can say about AI is that the market is huge. We expect that the market over the next three or four years will be around 500 billion dollars. And in that type of market, you need all different kinds of computing. There’s no one company that has all of the solutions. My view is that you need every kind of computing — you need CPUs, you need GPUs, you need ASICs, you need FPGAs. And in that framework, I think our AI strategy is, number one, to have a very complete solution — a complete solution that includes hardware, software, and systems. And the second piece is to have an open ecosystem. One of the most important things is to foster collaboration and to have an open ecosystem, so that people can learn from each other. That was also another important part about DeepSeek — it was an open model, and as a result, many people innovated on top of that.</p>
+<p>So my answer is: the market is huge, and our AI business spans every aspect — from the largest data centers to even the PC level. We believe there will be a lot of AI, so there’s a lot of market for all of us.</p>
+<p>I think the Taiwan ecosystem is very special. When you look at it — starting from the TSMC ecosystem, which has really built this incredible manufacturing capability, and then including all of the ODM, OEM, manufacturing ecosystem, design ecosystem — I think more investment on the software and system side will come. From an AMD standpoint, we’re very proud of our team here in Taiwan, which is a very important piece of our overall R&amp;D. But the other thing I would say is: in this world today, ecosystems are very interconnected. From a United States standpoint, I think we do rely on a lot of the Taiwan manufacturing ecosystem, and trying to build resilience into that ecosystem is important.</p>
+<p>I’m happy to say that I was born in Tainan, and my parents immigrated to the United States. And as you can imagine, that was a very big move for them. When we went to the US as a family, the key part that my parents always instilled upon me is: education is so important. So for all of you in school — I remember when I was at MIT, I very much wanted to finish school. After my bachelor’s degree, I actually thought I should finish school and go to work. And my parents said, “No, Lisa, you cannot do that.” They strongly, strongly suggested I get a PhD. At the time, I was very impatient. I was like, “Oh, school is enough. Maybe some of you feel the same way.” And the truth is, my parents were right — because what you get from your university and your graduate school is really an opportunity to learn many different things and to build the confidence to solve the future problems. So even though I was not happy with my parents at the time, I think they were absolutely right.</p>
+<p>And as for the experience of being CEO of AMD — I would say it was kind of my dream job, to start from a semiconductor engineer, to become a business person, and then become a semiconductor leader. But it was not easy, especially in those early years. My parents and family have always been very supportive of that, and I’m very lucky in that way.</p>
+<p>My thinking is that there are many different kinds of leaders, and we have a lot of respect for all kinds of leaders. But I truly believe that university education is so helpful. These years that you’re in university are really the best time to learn and to decide what you enjoy the most, so that you can decide your next step in your career.</p>
+<p>First of all, I have tremendous respect for Jensen — tremendous respect. I think as the founder of Nvidia, he has really built an amazing company. I would say that we run independent companies, though. Probably in the semiconductor industry, we do have a semiconductor industry association in the US where all semiconductor companies are present, and in that forum we would exchange some ideas.</p>
+<p>I can say that in my experience, one piece of probably the best advice I received from a mentor was: “Lisa, whatever you do, I would suggest that you pick the hardest problems.” The advice they gave me is to run towards problems. And I think that’s the best advice I can give students — because there are so many interesting things to do in the world, and choosing a project, a problem, or a company where you can make a big impact means you will learn so much and be able to contribute so much. And I can say for sure that I learned the most from the biggest mistakes I made. So mistakes are not a bad thing — mistakes are actually a good thing, because you can learn from those lessons and be better in the future.</p>
+<p>The political science question is not the easiest question — technology is actually a little easier. I think I would maybe not talk about individual countries, but talk a little bit about my thinking on AI. Because AI is such a new technology — if you think about the last few years, we’re all learning together. Countries are learning, companies are learning, individuals are learning. The initial thought process is that AI could be quite dangerous if there are not good guardrails. However, on the other side, you don’t want to stop innovation. From my standpoint, I think AI is the type of technology where we have to innovate and go as fast as possible, while understanding that there does have to be regulation — but not too much regulation, so that you slow down the progress. In general, that’s my philosophy. And I think countries that embrace technology are going to really benefit from it. Many countries around the world are all building their AI policies.</p>
+<p>I think everybody should be educated in AI. It doesn’t matter which department you’re in. When you say you’re in the literature and linguistics department, I think AI can also be very beneficial — to understand how to apply AI in your field. And most of what we see today is that people are still learning what they can use AI for in each field. So we talk a lot about the development of AI, but there’s also a whole field on the application of AI going forward. I would certainly encourage all students to explore that.</p>
+<p>I would say that Taiwanese-Americans and Taiwanese in general are extremely hardworking and really think about how to contribute to their fields and their professions. And I think that’s something we can be very proud of. Although some people say that I’m more American than Taiwanese, I’d like to think I’m Taiwanese-American.</p>
+<p>Probably the most difficult time for AMD was when I started in 2014. At that time, the company had a roadmap that was not competitive. If you’re in a technology company, your product is the most important thing — I would say that’s the number one thing. And so our goal was to really reframe our product roadmap. I had three priorities: the first was to build great products; the second was to have very, very deep customer relationships, because together in this world there’s no one company that has all the good ideas, and collaboration is very important; and the third is to be very agile and move very quickly.</p>
+<p>In that standpoint, our biggest job was to give ourselves time to build this great roadmap. And I am now happy to say our CPU roadmap is based on our Zen technology — we’re now on the fifth generation of Zen technology. We went from, let’s call it, not the best — to today, where I feel we have the best CPU technology in the world. And we also have a much broader roadmap going forward. So the key in those times is to be very clear about what you’re trying to achieve. For us, in a technology company, it is always to build great products — that’s the number one foundation.</p>
+<p>In terms of semiconductor trends, I would say we start with the idea that we have to have a very holistic design environment — hardware, software, and systems all need to be optimized together. Probably one of the most exciting parts about AI is that we’re still in the very early innings. I would say we still have probably ten years of very significant innovation in AI. And on the application space, we’re going to go from today — where we talk about AI making our businesses or people more productive — to, over the next many years, much larger changes in terms of what AI can do for us. Probably one of my most exciting or most interesting areas is healthcare and life sciences. I know that there’s a medical school here, and the application of AI together with medicine I think can help us solve things like curing diseases, finding new drug therapeutics, and diagnosing future health problems much sooner. That’s just one example of what AI can do going forward.</p>
+<p>I would encourage you to be very ambitious in what you would like to achieve. The most important thing for young students or those early in their career is: you can do anything. So have very big dreams. And if you tell people — tell your colleagues, your managers, your future mentors — people will help you achieve those opportunities. I would say that sometimes Taiwanese or Asian people are a little shy. So speak up. Share your dreams.</p>
+<p>When you have the right people, it makes all the difference — because not everyone has the same motivation. Some people are motivated by their project, some by starting a company, some by other reasons. At AMD, we try to have the right people to build that team. And for our engineers, when we started, we wanted to build the best — that was our ambition. But we also thought we should be very realistic: you cannot go overnight from not competitive to the best. You have to build a plan to do that. Engineers basically love to solve problems. We have to give them good problems to solve. We’re all motivated by seeing success — success comes in recognition of the product, great people wanting to join the company, and yes, revenue growth, which leads to market share growth, which leads to stock price growth.</p>
+<p>My personal opinion is that a PhD is actually pretty useful. During your PhD thesis, you work on a problem that nobody else is really working on in the world, and that gives you a lot of opportunity to explore much more broadly than sometimes you can in a company, where you become much more focused. So I actually think a PhD is pretty useful — but it’s different for every person.</p>
+<p>On the topic of soft skills: I would say the world changes very fast, so it’s important to be quite agile in your thinking. Maybe today you think this is the right path, but you will learn something every day. I have a big philosophy that says you need to continuously learn all the time. Every day you’re going to learn something new, and you can decide how you might change your path. That’s something I use very much, and it’s an important soft skill.</p>
+<p>And then on how you deal with setbacks — I said earlier you actually learn the most when you have a setback, a failure. I can tell you so many examples of my own setbacks. But my advice is: you can be sad for just a short time. Of course, we’re all human beings — if something didn’t go the way you wanted, you might be a little unhappy. But only for a very short time. And then after that, you learn, and you get really focused on your next thing. I think that’s the key.</p>
+<p>I can say for sure I’m just an okay student — okay meaning pretty good, but not A++. Maybe A-minus, that kind of thing. I actually think everyone is different, and the most important thing is to take whatever you learn and apply it in the real world. Even in device physics — a very, very hard class — I found that the written problems were very hard, but working in the lab on a project, I was really good. So everyone has their specialty.</p>
+<p>Let me say one thing: I’m a big believer that it’s not the number of people you have for anything — for a company, for a project — it’s whether you have the right people. When I first started at AMD, we had 8,000 people. People used to say, “Oh my goodness, you’re so small compared to Intel.” At that time, I think Intel had maybe ten times the people of AMD. And they said, “Lisa, you’re crazy. Why are you doing that? You cannot possibly win.” And I said, “Really? Why do you say that? I don’t feel that way. I don’t feel that it’s the number of people — I feel that it’s the right people, with the right project, with the right focus, and the right vision.”</p>
+<p>And to the point about how do you optimize — I think everyone has in their mind what they can see as their path, and every company’s path is different. From my standpoint, and maybe since this is the last question, I will make it a little bit broader: we are incredibly lucky to be in this technology field. I hope all of you feel this way. What I really enjoy about what we’re doing in technology is that the technology we’re working on is touching billions of people every day. It is having an impact on people’s lives. It will make companies better. It will make your life better. It will make our future healthcare better. It will make our future sustainability better. From all of those aspects, we’re very lucky to work on this type of technology. And so we have to find what is it that we’re going to do best. For us at AMD, it’s around high performance computing. I don’t believe that we can do everything — but I do believe that in high performance computing, it can have a very wonderful impact on people’s lives. And that’s what we choose to do.</p>
+<hr>
+<h2 id="Vocabulary-Expressions"><a href="#Vocabulary-Expressions" class="headerlink" title="Vocabulary &amp; Expressions"></a>Vocabulary &amp; Expressions</h2><p>以下精选演讲中有代表性的词汇和表达，按类别整理。</p>
+<h3 id="一、商业与科技术语"><a href="#一、商业与科技术语" class="headerlink" title="一、商业与科技术语"></a>一、商业与科技术语</h3><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文释义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>high performance computing</strong></td>
+<td>高性能计算</td>
+<td>AMD核心战略方向，简称HPC</td>
+</tr>
+<tr>
+<td><strong>roadmap</strong></td>
+<td>技术路线图</td>
+<td>科技公司常用词，指产品规划蓝图</td>
+</tr>
+<tr>
+<td><strong>holistic design</strong></td>
+<td>整体性设计</td>
+<td>指硬件、软件、系统协同设计的思路</td>
+</tr>
+<tr>
+<td><strong>chiplet technology</strong></td>
+<td>小芯片技术</td>
+<td>将芯片拆分为多个功能模块后再封装，AMD重要技术路线</td>
+</tr>
+<tr>
+<td><strong>Moore’s law</strong></td>
+<td>摩尔定律</td>
+<td>每18-24个月晶体管数量翻倍的规律</td>
+</tr>
+<tr>
+<td><strong>mixture-of-experts (MoE)</strong></td>
+<td>专家混合模型</td>
+<td>一种AI模型架构，DeepSeek使用的关键技术</td>
+</tr>
+<tr>
+<td><strong>frontier models</strong></td>
+<td>前沿大模型</td>
+<td>指GPT-4、Claude等顶尖规模的AI模型</td>
+</tr>
+<tr>
+<td><strong>ASICs</strong></td>
+<td>专用集成电路</td>
+<td>Application-Specific Integrated Circuits，专为特定任务设计的芯片</td>
+</tr>
+<tr>
+<td><strong>FPGAs</strong></td>
+<td>现场可编程门阵列</td>
+<td>Field-Programmable Gate Arrays，可重新编程的芯片</td>
+</tr>
+<tr>
+<td><strong>ODM &#x2F; OEM</strong></td>
+<td>代工设计商 &#x2F; 原始设备制造商</td>
+<td>台湾制造生态的重要组成</td>
+</tr>
+<tr>
+<td><strong>open ecosystem</strong></td>
+<td>开放生态系统</td>
+<td>强调开放协作而非封闭垄断</td>
+</tr>
+<tr>
+<td><strong>guardrails</strong></td>
+<td>护栏、安全边界</td>
+<td>比喻对AI技术的规范与约束机制</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="二、地道表达与习语"><a href="#二、地道表达与习语" class="headerlink" title="二、地道表达与习语"></a>二、地道表达与习语</h3><p><strong>1. “what do you want to be when you grow up”</strong></p>
+<ul>
+<li>字面意思是”你长大后想成为什么”，这里活用于企业层面</li>
+<li>意思是：<strong>一家公司必须想清楚自己的核心定位是什么</strong></li>
+<li>中文可译为：”弄清楚自己想成为什么样的公司”</li>
+</ul>
+<p><strong>2. “we’re still in the very early innings”</strong></p>
+<ul>
+<li>“inning”是棒球术语，指”局”</li>
+<li>这里是比喻：<strong>我们还处于AI发展的早期阶段</strong></li>
+<li>类似中文说法：”才刚刚起跑”、”尚处于开局阶段”</li>
+</ul>
+<p><strong>3. “run towards problems”</strong></p>
+<ul>
+<li>直译是”朝着问题跑去”</li>
+<li>实际含义：<strong>主动迎难而上，而不是回避困难</strong></li>
+<li>是Lisa Su从导师那里得到的最重要建议之一</li>
+</ul>
+<p><strong>4. “no one-size-fits-all”</strong></p>
+<ul>
+<li>字面意思：”没有一套适合所有人的方案”</li>
+<li>商业语境中常用，意指：<strong>不存在放之四海而皆准的解决方案</strong></li>
+</ul>
+<p><strong>5. “instilled upon me”</strong></p>
+<ul>
+<li>“instill”意为”将……灌输&#x2F;植入”</li>
+<li>“my parents always instilled upon me” &#x3D; <strong>父母一直向我灌输（某种理念）</strong></li>
+</ul>
+<p><strong>6. “agile”</strong></p>
+<ul>
+<li>原意”敏捷”，在科技商业语境中特指：<strong>能快速响应变化、灵活调整方向的能力</strong>，也是一种软件开发方法论（敏捷开发）</li>
+</ul>
+<p><strong>7. “touching billions of people every day”</strong></p>
+<ul>
+<li>不是字面的”触摸”，而是比喻：<strong>影响着每天数十亿人的生活</strong></li>
+<li>这是Lisa Su反复强调AMD使命感的核心表达</li>
+</ul>
+<p><strong>8. “A-minus kind of student”</strong></p>
+<ul>
+<li>美国成绩评分体系：A+、A、A-、B+……</li>
+<li>意思是：<strong>成绩不错，但并非顶尖</strong>，强调并非天才、靠努力和实践见长</li>
+</ul>
+<p><strong>9. “that’s a market statement vs. a technology statement”</strong></p>
+<ul>
+<li>Lisa Su区分两种性质的判断：<strong>技术层面的判断</strong>（客观分析技术影响）vs. <strong>市场层面的判断</strong>（商业竞争预测）</li>
+<li>这是她在谈DeepSeek时刻意区分的表达，显示商业谨慎</li>
+</ul>
+<p><strong>10. “resilience”</strong></p>
+<ul>
+<li>在供应链语境中指：<strong>韧性、抗风险能力</strong></li>
+<li>“build resilience into the ecosystem” &#x3D; <strong>增强生态系统的抗风险韧性</strong></li>
+</ul>
+<hr>
+<h3 id="三、演讲风格词汇（口语化表达）"><a href="#三、演讲风格词汇（口语化表达）" class="headerlink" title="三、演讲风格词汇（口语化表达）"></a>三、演讲风格词汇（口语化表达）</h3><table>
+<thead>
+<tr>
+<th>表达</th>
+<th>功能</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>“Let me say one thing”</strong></td>
+<td>引入重要观点</td>
+<td>口语化的强调句式</td>
+</tr>
+<tr>
+<td><strong>“you know”</strong></td>
+<td>填充语</td>
+<td>演讲中频繁出现，相当于中文”你知道吗”</td>
+</tr>
+<tr>
+<td><strong>“from my standpoint”</strong></td>
+<td>表达个人立场</td>
+<td>等同于”in my opinion”，但更正式</td>
+</tr>
+<tr>
+<td><strong>“to that end”</strong></td>
+<td>承接逻辑</td>
+<td>“为此”、”为了这个目标”</td>
+</tr>
+<tr>
+<td><strong>“back to the question”</strong></td>
+<td>回归正题</td>
+<td>演讲中用来归位焦点</td>
+</tr>
+<tr>
+<td><strong>“I would say”</strong></td>
+<td>语气缓冲</td>
+<td>表达观点时的谦和措辞</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="中文翻译"><a href="#中文翻译" class="headerlink" title="中文翻译"></a>中文翻译</h2><p>首先，感谢陈校长的邀请——您其实已经邀请我来台湾大学好几次了，每一次我都深感荣幸。但我每次来台湾行程都非常紧凑，尤其是Computex前后，总是忙得不可开交。所以这次能专程过来拜访，真的非常难得。也要感谢吴教授，谢谢大家的热情款待。能在这里见到这么多优秀的学生，我由衷感到高兴——虽然你们让我觉得自己老了不少，但希望我分享的一些故事，能对大家的职业发展有所助益。</p>
+<p>先介绍一下我自己的背景。我学的是电机工程与计算机科学，在MIT读完了学士、硕士和博士，专攻半导体器件。那时候年轻，读的就是这个。到了AMD，我已经在半导体行业深耕超过三十年了，这一路走下来最深的感受就是：技术迭代之快，超乎想象。我是2012年加入AMD的，2014年起担任CEO。</p>
+<p>对任何一家公司来说，最重要的事可能就是想清楚一个问题：你到底想成为一家什么样的公司？AMD的答案在我看来很明确，那就是高性能计算。而高性能计算，正是当今所有人生活的核心。我常说，AMD的技术每天触达全球数十亿人——无论是云端数据中心、网络边缘节点，还是个人电脑、汽车、工业设备，你几乎都能找到AMD技术的身影。</p>
+<p>但对于一家科技公司而言，最重要的事是要有长远的战略和技术路线图。我们的重点聚焦在三件事上：第一，高性能计算；第二，建立卓越的合作伙伴关系，其中台积电是我们最核心的战略伙伴；第三，正视半导体行业的变局——摩尔定律正在放缓，我们因此在小芯片技术上押下了重注，将其视为未来最关键的技术方向。</p>
+<p>这些是AMD走到今天的基石。我很欣慰地看到，在全球最顶尖的十台超级计算机中，有五台采用的是AMD的技术。从这一点上，我深信高性能计算正是未来最重要的方向。</p>
+<p>我听说很多同学仍然认为芯片设计是最令人兴奋的领域。我觉得这其实一直是在变化的——有时候硬件更热门，有时候软件更受追捧。但在我看来，最令人激动的其实是整体性设计——你必须将硬件、软件和系统作为一个整体来设计。尤其是在AI时代，各个部分根本不能割裂开来看。你必须从系统全局出发——先想清楚算法和应用场景是什么，再去思考芯片应该怎么设计。</p>
+<p>关于AI行业，我可以说：几乎每周都会出现新的技术突破。DeepSeek在一月份发布的时候，确实让很多人吃了一惊。仔细研究它做的事情，其实技术上相当聪明——把各种创新整合在一起，混合专家模型等等。但DeepSeek带给我们最重要的启示是：当你能让AI变得更易获取、成本更低，使用量和应用场景就会爆发式增长。所以DeepSeek真正做到的，是大大加速了AI的落地应用。</p>
+<p>当然，这是技术层面的判断，不是市场预测。从我们观察到的情况来看，AI计算领域并不存在一套放之四海而皆准的方案。顶尖的前沿大模型赛道上，少数能投入数千亿美元的玩家会全力冲刺，追求极致性能。但这只是AI应用的一种形态。未来还会涌现出各种中型模型、小型模型，人们也会用不同的算法路径来达到目标。因此我预判，未来既会持续有大规模的重磅投资，也会有越来越多平价高效的选择并存。</p>
+<p>总体而言，关于AI最重要的一句话就是：市场足够大。我们预计未来三到四年，这个市场规模将达到五千亿美元。在这么大的市场里，需要各种各样的算力，没有哪家公司能包打天下。在我看来，CPU、GPU、ASIC、FPGA——各种计算方式都有其用武之地。在这个框架下，AMD的AI战略有两个核心：一是提供完整的解决方案，涵盖硬件、软件和系统；二是构建开放的生态系统，鼓励协作与共享，让大家能够互相借鉴。DeepSeek的成功也印证了这一点——正是因为它选择了开放，才引发了大量的二次创新。</p>
+<p>所以说，市场很大，机会很多，AMD的AI布局从最大规模的数据中心延伸到个人电脑，各个层面都有所覆盖。这个领域足够大，足以容纳所有人。</p>
+<p>我认为台湾的产业生态非常独特。从台积电构建起来的制造能力出发，再叠加上ODM、OEM、整个制造与设计生态，已经形成了强大的基础。未来我相信软件和系统层面的投资还会进一步加码。AMD在台湾的团队是我们全球研发体系中非常重要的一环，我们对此深感自豪。另外我也想说，今天的世界，各个生态系统之间高度相互依存。美国的确在很大程度上依赖台湾的制造生态，如何为这套生态系统建立更强的韧性，是一个重要的课题。</p>
+<p>顺便说一句，我出生在台南，父母后来移民到了美国——那对他们来说是非常重大的一步。到了美国之后，父母一直给我灌输的核心理念就是：教育，至关重要。所以我想对在座所有还在学校里的同学说：我在MIT读书的时候，其实非常想赶紧毕业。拿到学士学位之后，我一度觉得应该去工作了。我父母斩钉截铁地说：”不行，Lisa，你必须读博。”当时的我非常不耐烦——“书够了，够了！”也许你们有人现在也有同样的感受。但事实证明，父母是对的。大学和研究生阶段给你的，是一段可以广泛学习、建立自信、锻炼独立解决问题能力的宝贵时光。当年我对父母的决定很不满意，但如今回头看，他们完全正确。</p>
+<p>担任AMD CEO这段经历，可以说是我的梦想成真——从半导体工程师起步，成长为商界人士，再成为半导体行业的领军者。这条路走得并不容易，尤其是早期那些年。但父母和家人始终是我最坚实的后盾，我在这方面非常幸运。</p>
+<p>我的看法是，优秀的领导者有很多种，每一种都值得尊重。但我真心认为，大学阶段的系统教育无可替代。你们现在在大学里的这几年，是最好的探索时光——弄清楚自己真正热爱什么，才能为下一步的职业选择打好基础。</p>
+<p>说到黄仁勋，我对他有非常真诚的敬意——作为英伟达的创始人，他把这家公司做到了令人叹为观止的高度。当然，我们是各自独立运营的公司。在美国半导体行业协会的框架下，各家企业有时会在同一个场合交流一些看法。</p>
+<p>说到我所收到过的最重要的职业建议——有位导师曾对我说：Lisa，不管做什么，要主动选择最难的问题。这句话的核心就是：迎难而上，而不是绕道而行。这也是我想送给在座同学的最重要的建议。这个世界上有太多有趣的事情可以做，但选择一个真正能让你产生重大影响的项目、问题或公司，你能从中学到的东西，以及你能作出的贡献，都将是无可比拟的。我可以坦诚地说，我从最大的错误中学到的东西最多。所以犯错并不可怕，犯错是一件好事——因为那些教训会让你越来越好。</p>
+<p>关于各国AI政策的问题，这比技术问题复杂多了，我就不展开谈具体国家了。但我可以分享一下我对AI的整体看法：AI是一项全新的技术，过去这几年，所有人——国家、企业、个人——都还在摸索学习之中。一方面，如果缺乏必要的安全边界，AI确实可能存在较大风险；另一方面，我们又不希望因为过度管控而扼杀创新。我的立场是：AI是一种必须全力推进、加速创新的技术，同时也需要适度监管，但不能矫枉过正，阻碍进步。我相信，那些积极拥抱技术的国家，将会从中受益最深。各国正在纷纷制定自己的AI政策，这是一个非常动态的时代。</p>
+<p>我认为，AI教育应该是面向所有人的，无论你在哪个专业。你说你在文学与语言学系，AI对你同样大有裨益——关键是学会如何将AI应用到自己的领域中。现阶段，大家普遍还在摸索各自领域里AI的用武之地。我们讨论了很多AI技术的开发，但AI的应用研究同样是一个广阔的方向。我非常鼓励所有同学都去探索。</p>
+<p>台湾人，包括台湾裔美国人，给我的印象是非常勤奋，而且真心致力于在自己的领域里作出贡献——这是我们应当引以为豪的特质。虽然有人说我更像美国人，但我更愿意称自己是台湾裔美国人。</p>
+<p>AMD最艰难的时期，大概是我2014年接手时的那段日子。那时候，公司的产品路线图已经完全失去竞争力。对于科技公司来说，产品是一切的根本，是重中之重。所以我们的首要任务，就是彻底重塑产品路线图。我当时给自己定了三个优先级：第一，做出卓越的产品；第二，建立深厚的客户关系——因为这个世界上没有哪家公司能独揽所有好点子，协作永远是必要的；第三，保持高度的敏捷性，快速行动。</p>
+<p>在那段时期，最重要的事是争取足够的时间来完成这张路线图。今天，AMD的CPU架构建立在Zen技术的基础上，我们已经迭代到了第五代Zen。从当年的”竞争力不足”，到今天我可以自信地说，我们拥有全球最强的CPU技术。前提是你要对目标有清晰的认知——在科技公司里，建好产品永远是第一基础。</p>
+<p>谈到半导体的技术趋势，我觉得起点还是整体性的设计理念——硬件、软件、系统必须协同优化。关于AI，我认为最令人兴奋的，是我们还处于非常早期的阶段，前面还有大约十年的密集创新期。在应用层面，我们会从今天的”帮助企业和个人提升生产力”，逐步走向更深远的变革。其中我个人最感兴趣、也最看好的领域是医疗健康与生命科学。我知道这里有医学院，AI与医学的结合，有望帮助人类攻克顽疾、发现新药、更早诊断潜在的健康问题——这只是AI未来能做到的事情的一个缩影。</p>
+<p>我想鼓励大家：对自己的目标要有野心，要敢于做大梦。对于年轻学生或者初入职场的人来说，最重要的认知是——你可以做到任何事。所以大胆说出你的梦想，告诉你的同学、导师、未来的上司，大家都会愿意帮助你去实现它。我想特别说：华人或亚裔的学生，有时候会稍显内敛。要大声说出来，不要藏着掖着。</p>
+<p>说到团队建设，我始终认为：关键不在于人多，而在于找对人。每个人的动力来源不同——有人热爱项目本身，有人想创业，有人有其他的驱动力。AMD的做法是找到合适的人，组建合适的团队。对于我们的工程师，我们从一开始就立志做到最好，但同时也保持清醒：从”不具竞争力”到”业界最强”，不可能一蹴而就，必须有一套扎实的计划。工程师的本质是热爱解题，所以你要给他们真正值得解的好题目。每个人都受到成功的激励——来自产品的认可、人才的加盟，也来自收入增长、市场份额扩大、股价提升。</p>
+<p>关于读博士，我个人的看法是：非常值得。博士阶段你会深耕一个几乎没有人在做的问题，这种广度的探索，是进入企业之后很难得到的。所以我认为读博士很有价值——当然，每个人的情况不同。</p>
+<p>软实力方面，我想说的是：世界变化太快，思维上的敏捷度非常关键。也许今天你认定了一条路，但明天你可能就会学到全新的东西。我有一个根深蒂固的信念：必须持续学习，每一天。每天都有新的东西值得学习，然后你再决定要不要调整方向。这是我非常重视的一种能力，也是我觉得最重要的软实力之一。</p>
+<p>关于如何面对挫折——我之前说过，你往往从最大的失败中学到最多。我自己的挫折经历实在不少，但我的建议是：难过可以，但只能难过一小会儿。我们都是人，事情没有按预期发展的时候，心里会不好受，这很正常。但只能难过一小会儿，之后就要迅速从中汲取教训，把精力全部投入下一件事。这是最关键的。</p>
+<p>我得坦白说，我只是一个还不错的学生——不是什么A++的尖子生，大概就是A-减的水平吧。我真心认为每个人都不一样，最重要的是把你学到的东西运用到现实世界中去。就拿器件物理来说，那门课对我来说非常难，书面考试让我很头疼，但一到实验室做项目，我就来劲了——每个人都有自己擅长的地方。</p>
+<p>我一直有一个坚定的信念：做任何事，关键不在于人的数量，而在于有没有合适的人。AMD刚开始的时候只有8000名员工，很多人对我说：”天哪，你们跟英特尔比起来太小了，他们的人数可能是你们的十倍。你这是在瞎搞，根本赢不了。”我的回答是：”是吗？为什么？我并不这么认为。人数多少不是关键，关键是有没有对的人、对的项目、对的专注点、对的愿景。”</p>
+<p>最后，关于如何优化与前进——每个人心中都有自己看得到的路，每家公司的路也都不一样。站在这个时间节点上，我想说得更宏观一点：我们能身处这个科技行业，真的是无比幸运。我衷心希望大家也有这种感受。我最热爱这份工作的原因是：我们所做的技术，每天在影响着全球数十亿人的生活。它让企业更强大，让你的生活更美好，让未来的医疗更先进，让我们的地球更可持续。从这些维度上看，我们是非常幸运的一群人。所以我们要找到自己能做到最好的那件事——AMD选择的是高性能计算。我们不认为可以做所有事，但我们相信，在高性能计算这件事上，我们能为人类的生活带来真正美好的改变。这，就是我们的选择。</p>
+<hr>
+<p>整理自 <a target="_blank" rel="noopener" href="https://app.notion.com/p/37e776b13c648022b9a1ce488f94aee6">English &#x2F; Passage12</a>。本页于 2026-09-28 整理发布。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://weipingwu2023.github.io">Kenny Wu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://weipingwu2023.github.io/2026/09/28/2026-09-28-lisa-su-career-advice-and-high-performance-computing/">https://weipingwu2023.github.io/2026/09/28/2026-09-28-lisa-su-career-advice-and-high-performance-computing/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/sponge.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/09/28/2026-09-28-wealth-killers-in-your-20s-and-30s/" title="The Biggest Wealth Killers in Your 20s and 30s (Avoid At All Costs)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">The Biggest Wealth Killers in Your 20s and 30s (Avoid At All Costs)</div></div><div class="info-2"><div class="info-item-1">SummaryThis video argues that major life choices can have a lasting effect on personal finances. It discusses location, emergency savings, divorce, lifestyle spending, salary versus equity, delayed investing, sunk costs, expensive debt, and car purchases. Watch on YouTube   Content 以下为原笔记中的视频转录与学习内容，保留原素材的叙述语境。  My dad got divorced three times. He made good money, he worked hard, and did most of the right things financially — but he still felt like he was starting over at age 50. That’s becau...</div></div></div></a><a class="pagination-related" href="/2026/09/28/2026-09-28-why-more-americans-are-unemployed-for-longer/" title="Why More Americans Are Unemployed For Longer"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Why More Americans Are Unemployed For Longer</div></div><div class="info-2"><div class="info-item-1">SummaryThis video examines long-term unemployment through job seekers’ experiences and economic commentary. It describes a low-hire, low-fire environment and explores how prolonged unemployment can affect income, confidence, health, families, and communities. The notes include idioms and a Chinese translation. Watch on YouTube   Content 以下为原笔记中的视频转录与学习内容，保留原素材的叙述语境。  [数据引言]  Over 1.8 million Americans have been classified as long-term unemployed in a given month in 2026, meaning they’ve been ...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/sponge.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Kenny Wu</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Summary"><span class="toc-number">1.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Content"><span class="toc-number">2.</span> <span class="toc-text">Content</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vocabulary-Expressions"><span class="toc-number">3.</span> <span class="toc-text">Vocabulary &amp; Expressions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%95%86%E4%B8%9A%E4%B8%8E%E7%A7%91%E6%8A%80%E6%9C%AF%E8%AF%AD"><span class="toc-number">3.1.</span> <span class="toc-text">一、商业与科技术语</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9C%B0%E9%81%93%E8%A1%A8%E8%BE%BE%E4%B8%8E%E4%B9%A0%E8%AF%AD"><span class="toc-number">3.2.</span> <span class="toc-text">二、地道表达与习语</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%BC%94%E8%AE%B2%E9%A3%8E%E6%A0%BC%E8%AF%8D%E6%B1%87%EF%BC%88%E5%8F%A3%E8%AF%AD%E5%8C%96%E8%A1%A8%E8%BE%BE%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">三、演讲风格词汇（口语化表达）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AF%91"><span class="toc-number">4.</span> <span class="toc-text">中文翻译</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/28/2026-09-28-news-words-illusion/" title="News Words: Illusion">News Words: Illusion</a><time datetime="2026-09-28T01:29:00.000Z" title="Created 2026-09-28 09:29:00">2026-09-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/28/2026-09-28-why-education-is-destroying-east-asia/" title="Why Education is Destroying East Asia">Why Education is Destroying East Asia</a><time datetime="2026-09-28T01:28:00.000Z" title="Created 2026-09-28 09:28:00">2026-09-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/28/2026-09-28-learn-how-to-think-in-english/" title="Learn How to Think In English ( Stop Translating in Your Head )">Learn How to Think In English ( Stop Translating in Your Head )</a><time datetime="2026-09-28T01:27:00.000Z" title="Created 2026-09-28 09:27:00">2026-09-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/28/2026-09-28-personal-finance-for-dummies-book-summary/" title="Personal Finance For Dummies - Eric Tyson (Book Summary)">Personal Finance For Dummies - Eric Tyson (Book Summary)</a><time datetime="2026-09-28T01:26:00.000Z" title="Created 2026-09-28 09:26:00">2026-09-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/28/2026-09-28-one-on-one-with-warren-buffett/" title="One-on-One with Warren Buffett">One-on-One with Warren Buffett</a><time datetime="2026-09-28T01:25:00.000Z" title="Created 2026-09-28 09:25:00">2026-09-28</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Kenny Wu</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
