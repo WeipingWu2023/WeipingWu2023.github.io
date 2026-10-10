@@ -1,186 +1,53 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>KennyのBlog</title><meta name="author" content="Kenny Wu"><meta name="copyright" content="Kenny Wu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="KennyのBlog">
-<meta property="og:url" content="https://weipingwu2023.github.io/page/4/index.html">
-<meta property="og:site_name" content="KennyのBlog">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://weipingwu2023.github.io/img/sponge.png">
-<meta property="article:author" content="Kenny Wu">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://weipingwu2023.github.io/img/sponge.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://weipingwu2023.github.io/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        if (!ttl) return
-        const expiry = Date.now() + ttl * 86400000
-        localStorage.setItem(key, JSON.stringify({ value, expiry }))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return undefined
-        const { value, expiry } = JSON.parse(itemStr)
-        if (Date.now() > expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return value
-      }
-    }
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KennyのBlog</title>
+  <meta name="description" content="Kenny 的双语阅读与知识笔记，按主题、关键词和文章编号寻找内容。">
+  <link rel="canonical" href="https://weipingwu2023.github.io/page/4/index.html">
+  <link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/editorial.css">
+  <script src="/js/editorial.js" defer></script>
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="masthead wrap">
+    <div class="mast-top"><a href="/library/">文章索引</a><span>双语阅读 · 持续学习</span><button type="button" id="theme-toggle" aria-label="切换深浅主题">切换主题</button></div>
+    <a class="wordmark" href="/">KennyのBlog</a>
+    <div class="mast-bottom"><span>读懂英文，也读懂世界。</span><a href="/library/">搜索标题、内容或编号 →</a></div>
+    <nav aria-label="主要导航"><a href="/">首页</a><a href="/categories/">分类</a><a href="/categories/%E8%8B%B1%E8%AF%AD%E4%B8%8E%E8%A1%A8%E8%BE%BE/">英语与表达</a><a href="/categories/%E8%B4%A2%E5%AF%8C%E4%B8%8E%E6%8A%95%E8%B5%84/">财富与投资</a><a href="/categories/%E7%A4%BE%E4%BC%9A%E4%B8%8E%E6%95%99%E8%82%B2/">社会与教育</a><a href="/categories/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">科技与人工智能</a><a href="/categories/%E7%94%9F%E6%B4%BB%E4%B8%8E%E5%BF%83%E7%90%86/">生活与心理</a><a href="/categories/%E8%81%8C%E4%B8%9A%E4%B8%8E%E6%88%90%E9%95%BF/">职业与成长</a><a href="/categories/%E6%80%9D%E8%80%83%E4%B8%8E%E5%AD%A6%E4%B9%A0/">思考与学习</a><a href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%93%B2%E5%AD%A6/">科学与哲学</a></nav>
+  </header>
+  <main id="main" class="wrap">
+<div class="section-heading home-heading"><h2>最新阅读</h2><span>37 篇笔记 / 8 个主题</span></div>
 
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
-        script.onload = script.onreadystatechange = () => {
-          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
-        }
-        script.onerror = reject
-        document.head.appendChild(script)
-      }),
-      getCSS: (url, id) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onload = link.onreadystatechange = () => {
-          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
-        }
-        link.onerror = reject
-        document.head.appendChild(link)
-      }),
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
-  
-      
-      const activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
+<section class="front-grid" aria-label="最新文章">
+  <article class="story story-featured">
+  <div class="story-meta"><a href="/categories/%E6%80%9D%E8%80%83%E4%B8%8E%E5%AD%A6%E4%B9%A0/">思考与学习</a><span class="article-number">#037</span></div>
+  <h1><a href="/2026/10/10/euclid-elements-english-training/">This 1 Book Has Produced More Geniuses Than Any University in History</a></h1>
+  <p>借四位思想家的故事，学习定义、公开假设、反证法与依赖链。</p>
+  <a class="story-image" href="/2026/10/10/euclid-elements-english-training/" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/WGwRCw9TRyo/hqdefault.jpg" alt="" width="480" height="270" loading="eager"></a>
+  <time datetime="2026-10-10">2026-10-10</time>
+</article>
 
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
+  <div class="front-secondary"><article class="story ">
+  <div class="story-meta"><a href="/categories/%E6%80%9D%E8%80%83%E4%B8%8E%E5%AD%A6%E4%B9%A0/">思考与学习</a><span class="article-number">#036</span></div>
+  <h2><a href="/2026/10/06/2026-10-06-The-Writing-System-That-Saved-My-Brain/">The Writing System That Saved My Brain (Learn Faster &amp; Think Clearly)</a></h2>
+  <p>把写作作为思考、学习与独立创作的工具。</p>
+  <a class="story-image" href="/2026/10/06/2026-10-06-The-Writing-System-That-Saved-My-Brain/" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/KCjwU4XYBL8/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+  <time datetime="2026-10-06">2026-10-06</time>
+</article>
+<article class="story ">
+  <div class="story-meta"><a href="/categories/%E7%A4%BE%E4%BC%9A%E4%B8%8E%E6%95%99%E8%82%B2/">社会与教育</a><span class="article-number">#035</span></div>
+  <h2><a href="/2026/10/06/2026-10-06-How-AI-Is-Killing-The-Value-Of-A-College-Degree/">How AI Is Killing The Value Of A College Degree</a></h2>
+  <p>讨论学历价值、青年就业与 AI 自动化之间的关系。</p>
+  <a class="story-image" href="/2026/10/06/2026-10-06-How-AI-Is-Killing-The-Value-Of-A-College-Degree/" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/KW067woSxws/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+  <time datetime="2026-10-06">2026-10-06</time>
+</article>
+</div>
+  <aside class="front-rail"><h2>从这里开始</h2><p>按主题浏览，或用固定编号快速回到一篇笔记。</p><a class="text-link" href="/library/">打开全部文章索引 →</a><div class="rail-topics"><a href="/categories/%E8%8B%B1%E8%AF%AD%E4%B8%8E%E8%A1%A8%E8%BE%BE/"><span>英语与表达</span><span>9</span></a><a href="/categories/%E8%B4%A2%E5%AF%8C%E4%B8%8E%E6%8A%95%E8%B5%84/"><span>财富与投资</span><span>7</span></a><a href="/categories/%E7%A4%BE%E4%BC%9A%E4%B8%8E%E6%95%99%E8%82%B2/"><span>社会与教育</span><span>5</span></a><a href="/categories/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"><span>科技与人工智能</span><span>4</span></a><a href="/categories/%E7%94%9F%E6%B4%BB%E4%B8%8E%E5%BF%83%E7%90%86/"><span>生活与心理</span><span>4</span></a><a href="/categories/%E8%81%8C%E4%B8%9A%E4%B8%8E%E6%88%90%E9%95%BF/"><span>职业与成长</span><span>4</span></a><a href="/categories/%E6%80%9D%E8%80%83%E4%B8%8E%E5%AD%A6%E4%B9%A0/"><span>思考与学习</span><span>3</span></a><a href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%93%B2%E5%AD%A6/"><span>科学与哲学</span><span>1</span></a></div><a class="text-link" href="/categories/英语乐园/">全部英语学习笔记 →</a></aside>
+</section>
 
-      const theme = saveToLocal.get('theme')
-    
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
-        
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
-    
-      
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-  
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: 'Copy Successful',
-    error: 'Copy Failed',
-    noSupport: 'Browser Not Supported'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: 'Just now',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
-    buttonText: 'Load More'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'KennyのBlog',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'home'
-}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/sponge.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">KennyのBlog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">KennyのBlog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/24/2026-04-24-Why-I-dont-fear-death(and-you-shouldnt-either)/" title="Why I don't fear death(and you shouldn't either)">Why I don't fear death(and you shouldn't either)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-23T16:00:00.000Z" title="Created 2026-04-24 00:00:00">2026-04-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B9%90%E5%9B%AD/">英语乐园</a></span></div><div class="content">SummaryLink Text In this video, Hospice Nurse Julie explains that she is not afraid of death for two main reasons: one based on science and one based on a spiritual experience. 1. The Biological ReasonNurse Julie explains that our bodies are biologically built to help us die. When a person is dying naturally, the body starts a process to make it easier:  Sleeping more: Calcium levels in the body go up, which causes the person to sleep more and more. Less hunger and thirst: The body naturally ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/22/2026-04-22-How-to-Invest-for-Beginners(Full-Guide-+-Live-Example)/" title="How to Invest for Beginners(Full Guide + Live Example)">How to Invest for Beginners(Full Guide + Live Example)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-21T16:00:00.000Z" title="Created 2026-04-22 00:00:00">2026-04-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B9%90%E5%9B%AD/">英语乐园</a></span></div><div class="content">SummaryLink Text Investing is the practice of allocating money so that it generates more wealth in the long run. The primary reason to invest is to make your money “work for you,” since typical savings accounts offer extremely low interest rates, often yielding very little return. Furthermore, investing is essential to combat inflation, which causes money to lose purchasing power over time (for instance, recent inflation rates have been between 6% to 8% annually). A key benefit of investing i...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/19/2026-04-19-The%20PE%20RATIO%20Explained!%20-%20Price%20To%20Earnings%20Ratio%20Made%20Simple!/" title="The PE RATIO Explained! - Price To Earnings Ratio Made Simple!">The PE RATIO Explained! - Price To Earnings Ratio Made Simple!</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-18T16:00:00.000Z" title="Created 2026-04-19 00:00:00">2026-04-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B9%90%E5%9B%AD/">英语乐园</a></span></div><div class="content">SummaryLink Text The video explains the Price to Earnings (P&#x2F;E) Ratio—one of the most popular metrics used in investing—in a very simple way. Essentially, it is a quick way to see whether a company is good value for money. Here is a super easy summary of what you need to know about the P&#x2F;E ratio: 1. What is the P&#x2F;E Ratio?The P&#x2F;E ratio is just Price over Profit.  P stands for the Share Price (how much the company is asking you to pay for one share). E stands for Earnings Pe...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/17/2026-04-17-How%20I%20stopped%20feeling%20lonely%20FOREVER/" title="How I stopped feeling lonely FOREVER">How I stopped feeling lonely FOREVER</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-16T16:00:00.000Z" title="Created 2026-04-17 00:00:00">2026-04-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B9%90%E5%9B%AD/">英语乐园</a></span></div><div class="content">SummaryLink Text This video explains that loneliness isn’t just about being alone; it happens when there is a gap between the relationships you want and the ones you actually have. Even people with many followers or friends can feel lonely if those connections aren’t meaningful. To overcome chronic loneliness, the video suggests three main shifts:  Build a relationship with yourself: You cannot expect others to like you if you don’t like yourself or even know who you are. The first step is to...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/12/2026-04-12-Wealth-and-Happiness-Through-Personal-Development/" title="Wealth and Happiness Through Personal Development">Wealth and Happiness Through Personal Development</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-11T16:00:00.000Z" title="Created 2026-04-12 00:00:00">2026-04-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B9%90%E5%9B%AD/">英语乐园</a></span></div><div class="content">SummaryLink Text If you want to be happy and wealthy for the rest of your life, the main secret is to learn to work harder on yourself than you do on your job. This focus on growing yourself is called personal development. Happiness is found in what you become, not just in what you get. The sources suggest that success is something you attract by growing as a person, rather than something you have to chase after. For example, if someone gave you a lot of money, you would need to quickly becom...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/11/2026-04-11-Elon-Musk%E2%80%99s-Secret-To-Learning-Anything-Faster/" title="Elon Musk’s Secret To Learning Anything Faster">Elon Musk’s Secret To Learning Anything Faster</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-10T16:00:00.000Z" title="Created 2026-04-11 00:00:00">2026-04-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B9%90%E5%9B%AD/">英语乐园</a></span></div><div class="content">SummaryLink Text Elon Musk is the famous leader of companies like Tesla and SpaceX, but he wasn’t always an expert in rockets or AI. He taught himself these difficult subjects by using a special way of thinking. Why He Doesn’t Like Normal SchoolMusk believes that traditional schools focus too much on memorizing facts instead of truly understanding how things work. He thinks college is mostly a place to have fun and prove you can finish “annoying homework,” but he says you can actually learn a...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/04/10/2026-04-10-This-Communication-Skill-Can-Transform-Your-Life/" title="This Communication Skill Can Transform Your Life">This Communication Skill Can Transform Your Life</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-09T16:00:00.000Z" title="Created 2026-04-10 00:00:00">2026-04-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B9%90%E5%9B%AD/">英语乐园</a></span></div><div class="content">SummaryLink Text The video explains that communication is not a natural talent but a learned skill that can transform your relationships by increasing trust and emotional connection. To become a more effective communicator, you can use the LUV Method: L – ListenThe first step is simply to shut up and provide an empathetic presence. This means being fully present mentally and emotionally, rather than just being in the same room.  Remove distractions: Put away your phone and make eye contact. T...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/sponge.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Kenny Wu</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/WeipingWu2023"><i class="fab fa-github"></i><span>My GitHub Software</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/10/euclid-elements-english-training/" title="This 1 Book Has Produced More Geniuses Than Any University in History">This 1 Book Has Produced More Geniuses Than Any University in History</a><time datetime="2026-10-09T16:00:00.000Z" title="Created 2026-10-10 00:00:00">2026-10-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/06/2026-10-06-How-AI-Is-Killing-The-Value-Of-A-College-Degree/" title="How AI Is Killing The Value Of A College Degree — English Training">How AI Is Killing The Value Of A College Degree — English Training</a><time datetime="2026-10-05T16:00:00.000Z" title="Created 2026-10-06 00:00:00">2026-10-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/06/2026-10-06-The-Writing-System-That-Saved-My-Brain/" title="The Writing System That Saved My Brain (Learn Faster &amp; Think Clearly) — English Training">The Writing System That Saved My Brain (Learn Faster &amp; Think Clearly) — English Training</a><time datetime="2026-10-05T16:00:00.000Z" title="Created 2026-10-06 00:00:00">2026-10-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/10/05/2026-10-05-inside-chinas-race-to-build-the-worlds-data-centers/" title="Inside China’s Race To Build The World’s Data Centers">Inside China’s Race To Build The World’s Data Centers</a><time datetime="2026-10-05T01:30:00.000Z" title="Created 2026-10-05 09:30:00">2026-10-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/28/2026-09-28-news-words-illusion/" title="News Words: Illusion">News Words: Illusion</a><time datetime="2026-09-28T01:29:00.000Z" title="Created 2026-09-28 09:29:00">2026-09-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>Categories</span>
-            
-          </div>
-          <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B9%90%E5%9B%AD/"><span class="card-category-list-name">英语乐园</span><span class="card-category-list-count">37</span></a></li>
-          </ul></div><div class="card-widget card-archives">
-    <div class="item-headline">
-      <i class="fas fa-archive"></i>
-      <span>Archives</span>
-      
-    </div>
-  
-    <ul class="card-archive-list">
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2026/10/">
-            <span class="card-archive-list-date">
-              October 2026
-            </span>
-            <span class="card-archive-list-count">4</span>
-          </a>
-        </li>
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2026/09/">
-            <span class="card-archive-list-date">
-              September 2026
-            </span>
-            <span class="card-archive-list-count">24</span>
-          </a>
-        </li>
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2026/04/">
-            <span class="card-archive-list-date">
-              April 2026
-            </span>
-            <span class="card-archive-list-count">9</span>
-          </a>
-        </li>
-      
-    </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">37</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-10-09T16:59:49.022Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Kenny Wu</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+<section class="topic-section"><div class="section-heading"><h2>按主题阅读</h2><a href="/categories/">浏览全部栏目 →</a></div><div class="topic-grid"><section class="topic-column"><h3><a href="/categories/%E8%8B%B1%E8%AF%AD%E4%B8%8E%E8%A1%A8%E8%BE%BE/">英语与表达 <small>9</small></a></h3><a class="topic-entry" href="/2026/09/28/2026-09-28-news-words-illusion/"><span class="article-number">#033</span><span>News Words: Illusion</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-learn-how-to-think-in-english/"><span class="article-number">#031</span><span>Learn How to Think In English ( Stop Translating in Your Head )</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-12-ways-to-write-better-sentences/"><span class="article-number">#023</span><span>12 Ways to Write Better Sentences for Creative Writers</span></a><a class="topic-more" href="/categories/%E8%8B%B1%E8%AF%AD%E4%B8%8E%E8%A1%A8%E8%BE%BE/">查看本栏目 →</a></section><section class="topic-column"><h3><a href="/categories/%E8%B4%A2%E5%AF%8C%E4%B8%8E%E6%8A%95%E8%B5%84/">财富与投资 <small>7</small></a></h3><a class="topic-entry" href="/2026/09/28/2026-09-28-personal-finance-for-dummies-book-summary/"><span class="article-number">#030</span><span>Personal Finance For Dummies - Eric Tyson (Book Summary)</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-one-on-one-with-warren-buffett/"><span class="article-number">#029</span><span>One-on-One with Warren Buffett</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-wealth-killers-in-your-20s-and-30s/"><span class="article-number">#026</span><span>The Biggest Wealth Killers in Your 20s and 30s (Avoid At All Costs)</span></a><a class="topic-more" href="/categories/%E8%B4%A2%E5%AF%8C%E4%B8%8E%E6%8A%95%E8%B5%84/">查看本栏目 →</a></section><section class="topic-column"><h3><a href="/categories/%E7%A4%BE%E4%BC%9A%E4%B8%8E%E6%95%99%E8%82%B2/">社会与教育 <small>5</small></a></h3><a class="topic-entry" href="/2026/10/06/2026-10-06-How-AI-Is-Killing-The-Value-Of-A-College-Degree/"><span class="article-number">#035</span><span>How AI Is Killing The Value Of A College Degree</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-why-education-is-destroying-east-asia/"><span class="article-number">#032</span><span>Why Education is Destroying East Asia</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-something-is-seriously-off/"><span class="article-number">#027</span><span>Something is seriously off and millions are noticing...</span></a><a class="topic-more" href="/categories/%E7%A4%BE%E4%BC%9A%E4%B8%8E%E6%95%99%E8%82%B2/">查看本栏目 →</a></section><section class="topic-column"><h3><a href="/categories/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">科技与人工智能 <small>4</small></a></h3><a class="topic-entry" href="/2026/10/05/2026-10-05-inside-chinas-race-to-build-the-worlds-data-centers/"><span class="article-number">#034</span><span>Inside China’s Race To Build The World’s Data Centers</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-how-ai-became-more-expensive-than-workers/"><span class="article-number">#028</span><span>How AI Became More Expensive Than The Workers It Replaced</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-why-tech-companies-are-obsessed-with-india/"><span class="article-number">#017</span><span>Why Are Tech Companies Obsessed With India?</span></a><a class="topic-more" href="/categories/%E7%A7%91%E6%8A%80%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">查看本栏目 →</a></section><section class="topic-column"><h3><a href="/categories/%E7%94%9F%E6%B4%BB%E4%B8%8E%E5%BF%83%E7%90%86/">生活与心理 <small>4</small></a></h3><a class="topic-entry" href="/2026/09/28/2026-09-28-a-72-year-old-doctors-life-advice/"><span class="article-number">#021</span><span>This 72 Year Old Doctor&#39;s Life Advice Will Blow Your Mind...</span></a><a class="topic-entry" href="/2026/04/24/2026-04-24-Why-I-dont-fear-death(and-you-shouldnt-either)/"><span class="article-number">#007</span><span>Why I don&#39;t fear death(and you shouldn&#39;t either)</span></a><a class="topic-entry" href="/2026/04/17/2026-04-17-How%20I%20stopped%20feeling%20lonely%20FOREVER/"><span class="article-number">#004</span><span>How I stopped feeling lonely FOREVER</span></a><a class="topic-more" href="/categories/%E7%94%9F%E6%B4%BB%E4%B8%8E%E5%BF%83%E7%90%86/">查看本栏目 →</a></section><section class="topic-column"><h3><a href="/categories/%E8%81%8C%E4%B8%9A%E4%B8%8E%E6%88%90%E9%95%BF/">职业与成长 <small>4</small></a></h3><a class="topic-entry" href="/2026/09/28/2026-09-28-lisa-su-career-advice-and-high-performance-computing/"><span class="article-number">#025</span><span>Lisa Su on Career Choices and High-Performance Computing</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-aws-certification-roadmap-for-complete-beginners/"><span class="article-number">#018</span><span>AWS Certification Roadmap for Complete Beginners</span></a><a class="topic-entry" href="/2026/09/28/2026-09-28-why-women-are-choosing-blue-collar-jobs-over-college/"><span class="article-number">#015</span><span>Why Women Are Choosing Blue-Collar Jobs Over College</span></a><a class="topic-more" href="/categories/%E8%81%8C%E4%B8%9A%E4%B8%8E%E6%88%90%E9%95%BF/">查看本栏目 →</a></section><section class="topic-column"><h3><a href="/categories/%E6%80%9D%E8%80%83%E4%B8%8E%E5%AD%A6%E4%B9%A0/">思考与学习 <small>3</small></a></h3><a class="topic-entry" href="/2026/10/10/euclid-elements-english-training/"><span class="article-number">#037</span><span>This 1 Book Has Produced More Geniuses Than Any University in History</span></a><a class="topic-entry" href="/2026/10/06/2026-10-06-The-Writing-System-That-Saved-My-Brain/"><span class="article-number">#036</span><span>The Writing System That Saved My Brain (Learn Faster &amp; Think Clearly)</span></a><a class="topic-entry" href="/2026/04/11/2026-04-11-Elon-Musk%E2%80%99s-Secret-To-Learning-Anything-Faster/"><span class="article-number">#002</span><span>Elon Musk’s Secret To Learning Anything Faster</span></a><a class="topic-more" href="/categories/%E6%80%9D%E8%80%83%E4%B8%8E%E5%AD%A6%E4%B9%A0/">查看本栏目 →</a></section><section class="topic-column"><h3><a href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%93%B2%E5%AD%A6/">科学与哲学 <small>1</small></a></h3><a class="topic-entry" href="/2026/09/28/2026-09-28-what-is-time/"><span class="article-number">#022</span><span>What is Time?</span></a><a class="topic-more" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%93%B2%E5%AD%A6/">查看本栏目 →</a></section></div></section>
+<section class="index-invitation"><h2>找到你想读的那一篇。</h2><p>输入关键词、文章编号，或组合主题和排序方式。</p><form action="/library/" method="get"><label class="sr-only" for="home-search">搜索文章</label><input id="home-search" type="search" name="q" placeholder="例如：AI、投资、#037" autocomplete="off"><button type="submit">搜索文章</button></form></section>
+</main>
+  <footer class="wrap"><div><a class="footer-brand" href="/">KennyのBlog</a><p>英语学习、知识积累与个人思考。</p></div><div><a href="/library/">文章索引</a><a href="/archives/">时间归档</a><a href="https://github.com/WeipingWu2023" target="_blank" rel="noopener">My GitHub Software</a></div><small>© 2026 Kenny Wu</small></footer>
+</body></html>
