@@ -20,7 +20,7 @@
     if(!articles)return;
     const query=search.value.trim().toLowerCase(), number=query.match(/^#?0*(\d+)$/);
     const terms=query.split(/\s+/).filter(Boolean);
-    const rows=articles.filter(p=>(!catalog.dataset.tag||p.tags.includes(catalog.dataset.tag))&&(!topic.value||p.topic===topic.value)&&(number?p.id===Number(number[1]):terms.every(t=>`${p.title} ${p.topic} ${p.tags.join(' ')} ${p.summary} ${p.text}`.toLowerCase().includes(t))));
+    const rows=articles.filter(p=>(!catalog.dataset.period||p.date.startsWith(catalog.dataset.period))&&(!catalog.dataset.tag||p.tags.includes(catalog.dataset.tag))&&(!topic.value||p.topic===topic.value)&&(number?p.id===Number(number[1]):terms.every(t=>`${p.title} ${p.topic} ${p.tags.join(' ')} ${p.summary} ${p.text}`.toLowerCase().includes(t))));
     rows.sort(sort.value==='number'?(a,b)=>a.id-b.id:sort.value==='title'?(a,b)=>a.title.localeCompare(b.title):sort.value==='oldest'?(a,b)=>a.date.localeCompare(b.date)||a.id-b.id:(a,b)=>b.date.localeCompare(a.date)||b.id-a.id);
     const fragment=document.createDocumentFragment();
     for(const p of rows){
