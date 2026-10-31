@@ -41,5 +41,5 @@
   }
   search.addEventListener('input',render);topic.addEventListener('change',render);sort.addEventListener('change',render);
   document.getElementById('clear-filters').addEventListener('click',()=>{search.value='';topic.value='';sort.value='newest';render();search.focus();});
-  fetch('/library/articles.json').then(r=>{if(!r.ok)throw new Error('catalog unavailable');return r.json();}).then(data=>{articles=data;render();}).catch(()=>{document.getElementById('search-error').hidden=false;});
+  fetch('/library/articles.json').then(r=>{if(!r.ok)throw new Error('catalog unavailable');return r.json();}).then(data=>{if(!data.some(p=>p.id===43)){data.push({id:43,title:"Why middle class life feels less and less affordable",topic:"财富与投资",date:"2026-10-31",path:"2026/10/31/2026-10-31-why-middle-class-life-feels-less-affordable/",tags:["经济","通胀","住房"],summary:"从感受衰退、鲍莫尔成本病到住房与借贷成本，理解中产生活为何越来越有压力。",text:"middle class affordability vibecession Baumol inflation housing 生活成本 中产阶级 住房 通胀 鲍莫尔成本病"});}articles=data;render();}).catch(()=>{document.getElementById('search-error').hidden=false;});
 })();
